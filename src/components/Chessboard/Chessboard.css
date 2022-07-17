@@ -1,0 +1,16 @@
+#chessboard {
+	--board-size: 90;
+	--board-size-scale: 1vh;
+	width: calc(var(--board-size) * var(--board-size-scale));
+	height: calc(var(--board-size) * var(--board-size-scale));
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+	user-select: none;
+}
+
+@media screen and (orientation:portrait) {
+	#chessboard {
+		--board-size-scale: 1vw;
+	}
+}
